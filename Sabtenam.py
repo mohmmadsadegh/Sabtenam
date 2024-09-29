@@ -48,8 +48,17 @@ def Rigester(user):
         userAll.append(user)    
         return True    
     else:
-        messagebox.showwarning("توجه","مدارک شما برای ثبت نام کافی نیست")
-        return False            
+        if float(user["Avrage"]) < 15:
+            messagebox.showwarning("توجه","معدل شما کم تر از حد نصاب دانشگاه است")  
+            return False
+        elif meliyat.get()!=1:
+            messagebox.showwarning("توجه","این دانشگاه از پذیرش دانشجویان خارجی  برخوردار نیست") 
+            return False
+        elif moafiyat.get()!=1:
+            messagebox.showwarning("خدمت","شما باید به خدمت سربازی بروید")
+            return False
+        #messagebox.showwarning("معدل توجه"," شما برای ثبت نام کافی نیست")     
+        #return False            
 def Exist(value):
     for item in userAll:
         if item["Name"]==value["Name"] and item["Famili"]==value["Famili"] and item["Age"]==value["Age"] and item["Avrage"]==value["Avrage"]:

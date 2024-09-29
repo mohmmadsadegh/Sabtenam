@@ -1,6 +1,3 @@
-print("iran is one")
-print("i am irani")
-print("iran")
 from tkinter import Tk
 from tkinter import Label
 from tkinter import Button

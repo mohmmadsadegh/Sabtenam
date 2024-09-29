@@ -36,7 +36,7 @@ def OnClickRigester():
         Clear(listitems)
 userAll=[]
 def Rigester(user):
-    if float(user["Avrage"])>=15 and float(user["Avrage"])<=20 and meliyat.get()==1 and moafiyat.get()==1:
+    if float(user["Avrage"])>=15 and float(user["Avrage"])<=20 and meliyat.get()==1 and jens.get()==2 and moafiyat.get()==1:
         if Exist(user):
             messagebox.showerror("خطا","این داده تکراری است")
             return False
@@ -44,6 +44,9 @@ def Rigester(user):
             userAll.append(user)
             messagebox.showinfo("تبریک ","ثبت نام شما با موفقیت انجام شد")
             return True
+    elif float(user["Avrage"])>=15 and float(user["Avrage"])<=20 and meliyat.get()==1 and jens.get()==1:
+        userAll.append(user)    
+        return True    
     else:
         messagebox.showwarning("توجه","مدارک شما برای ثبت نام کافی نیست")
         return False            

@@ -45,8 +45,13 @@ def Rigester(user):
             messagebox.showinfo("تبریک ","ثبت نام شما با موفقیت انجام شد")
             return True
     elif float(user["Avrage"])>=15 and float(user["Avrage"])<=20 and meliyat.get()==1 and jens.get()==1:
-        userAll.append(user)    
-        return True    
+        if Exist(user):
+            messagebox.showerror("خطا","این داده تکراری است")
+            return False
+        else:    
+            userAll.append(user)    
+            messagebox.showinfo("تبریک ","ثبت نام شما با موفقیت انجام شد")
+            return True 
     else:
         if float(user["Avrage"]) < 15:
             messagebox.showwarning("توجه","معدل شما کم تر از حد نصاب دانشگاه است")  

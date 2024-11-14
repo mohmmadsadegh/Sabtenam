@@ -163,9 +163,8 @@ def ShowSearch():
     
 
 def closeFrm():
-    frmSearch.place_forget()    
-
-
+    frmSearch.place_forget()
+    
 #  frame
 frmSearch = Frame(screen, width=400, height=400, background="green")
 frmSearch.place(x=0, y=0)
@@ -193,7 +192,7 @@ Name = StringVar()
 Famili = StringVar()
 Age = StringVar()
 Avrage = StringVar()
-#  def and combobox    
+#  def and combobox
 
 
 def Getvalue():
